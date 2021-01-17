@@ -1,0 +1,179 @@
+/* -------------------- COLOR PALETTE ----------------------- */
+/* 
+    https://coolors.co/502050-ee686e-937b92-f7f2f7-ffffff
+
+                    #502050 Palatinate Purple 
+                    #EE686E Candy Pink 
+                    #937B92 Mountbatten Pink 
+                    #F7F2F7 Magnolia
+                    #FFFFFF White
+*/
+
+/* ----------------------- GLOBAL --------------------------- */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 13px;
+    font-family: 'Spartan', sans-serif;
+    background-color: #FFFFFF;
+    background-image: url(../images/bg-pattern-bottom-desktop.svg), url(../images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: top right, bottom left;
+}
+
+/* ----------------------- MAIN ----------------------------- */
+
+main {
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 20px;
+}
+p {
+    line-height: 1.7;
+}
+
+/* Title */
+h1 {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color:  #502050;
+}
+h1 + p {
+    font-size: 15px;
+    color: #937B92;
+    padding-top: 20px;
+}
+.title {
+    flex: 0 1 450px;
+}
+
+/* Ratings */
+dd {
+    font-weight: 700;
+    color: #502050;
+    padding-top: 2px;
+    flex: 1 0 210px;
+}
+.ratings {
+    flex: 0 1 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.rating-item {
+    background-color: #F7F2F7;
+    padding: 20px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 15px 30px;
+}
+.star {
+    padding: 0 2px;
+}
+
+/* Reviews */
+section {
+    margin-top: 50px;
+    flex: 1 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+article {
+    background-color: #502050;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1 1 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+h3 {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.buyer-category {
+    color: #EE686E;
+    padding-top: 2px;
+}
+.review-comment {
+    font-weight: 500;
+    color: #F7F2F7;
+    flex: 1 0 100%;
+}
+
+/* ----------------------- FOOTER --------------------------- */
+
+footer {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+footer a {
+    color: #3E52A3;
+}
+footer a:hover {
+    text-decoration: none;
+}
+
+/* ------------------- MEDIA QUERIES ------------------------ */
+
+@media screen and (max-width: 1299px) {
+    .ratings, .title {
+        flex: 1 1 450px;
+    }
+    .reviews {
+        margin-top: 0;
+    }
+}
+@media screen and (min-width: 1300px) {
+    article:first-child {
+        margin-bottom: 30px;
+    }
+    article:nth-child(2) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    article:last-child {
+        margin-top: 30px;
+    }
+    .rating-item:first-child {
+        margin-right: 90px;
+    }
+    .rating-item:nth-child(2) {
+        margin-right: 45px;
+        margin-left: 45px;
+    }
+    .rating-item:last-child {
+        margin-left: 90px;
+    }
+}
+@media screen and  (max-width: 600px){
+    .title {
+        text-align: center;
+    }
+    .rating-item {
+        justify-content: center;
+        text-align: center;
+
+    }
+}
