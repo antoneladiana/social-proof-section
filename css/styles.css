@@ -53,7 +53,8 @@ h1 + p {
     padding-top: 20px;
 }
 .title {
-    flex: 0 1 450px;
+    flex: 1 1 450px;
+    text-align: center;
 }
 
 /* Ratings */
@@ -64,7 +65,7 @@ dd {
     flex: 1 0 210px;
 }
 .ratings {
-    flex: 0 1 520px;
+    flex: 1 1 600px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -75,7 +76,8 @@ dd {
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
+    text-align: center;
     gap: 15px 30px;
 }
 .star {
@@ -84,7 +86,8 @@ dd {
 
 /* Reviews */
 section {
-    margin-top: 50px;
+    height: 250px;
+    margin-top: 0;
     flex: 1 0 100%;
     display: flex;
     flex-wrap: wrap;
@@ -136,44 +139,53 @@ footer a:hover {
 }
 
 /* ------------------- MEDIA QUERIES ------------------------ */
-
-@media screen and (max-width: 1299px) {
-    .ratings, .title {
-        flex: 1 1 450px;
-    }
-    .reviews {
-        margin-top: 0;
-    }
-}
-@media screen and (min-width: 1300px) {
-    article:first-child {
-        margin-bottom: 30px;
-    }
-    article:nth-child(2) {
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    article:last-child {
-        margin-top: 30px;
-    }
-    .rating-item:first-child {
-        margin-right: 90px;
-    }
-    .rating-item:nth-child(2) {
-        margin-right: 45px;
-        margin-left: 45px;
-    }
-    .rating-item:last-child {
-        margin-left: 90px;
-    }
-}
-@media screen and  (max-width: 600px){
+@media screen and (min-width: 600px){
+    /* Title */
     .title {
-        text-align: center;
+        text-align: left;
+    }
+
+    /* Ratings */
+    .rating-item {
+        justify-content: left;
+        text-align: left;
+
+    }
+}
+@media screen and (min-width: 1400px) {
+    /* Title */
+    .title {
+        flex: 0 1 450px;
+    }
+
+    /* Ratings */
+    .ratings {
+        flex: 0 1 600px;
     }
     .rating-item {
-        justify-content: center;
-        text-align: center;
+        min-width: 500px;
+    }
+    .rating-item:first-of-type {
+        align-self: flex-start;
+    }
+    .rating-item:nth-of-type(2) {
+        align-self: center;
+    }
+    .rating-item:last-of-type {
+        align-self: flex-end;
+    }
 
+    /* Reviews */
+    section {
+        margin-top: 50px;
+    }
+    article:first-of-type {
+        align-self: flex-start;
+    }
+    article:nth-of-type(2) {
+        align-self: center;
+    }
+    article:last-of-type {
+        align-self: flex-end;
     }
 }
